@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="128dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    tools:background="#000000"
+    tools:ignore="RtlHardcoded">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/headline_image"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginRight="8dp"
+            tools:foreground="@color/cardview_dark_background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+            <TextView
+                android:id="@+id/headline_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="32dp"
+                android:padding="4dp"
+                android:textSize="24sp"
+                android:lines="1"
+                android:ellipsize="end"
+                tools:text="SpaceX to launch rocket on the " />
+
+            <TextView
+                android:id="@+id/content_preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="24dp"
+                android:padding="4dp"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded"
+                tools:text="Lorem Ipsum et" />
+
+            <TextView
+                android:id="@+id/news_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:lines="1"
+                android:textSize="12sp"
+                android:layout_gravity="right|bottom"
+                tools:text="SpaceX.com" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

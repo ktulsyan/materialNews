@@ -34,10 +34,7 @@ public class NewsDatabaseDao {
         this.messageDigest = messageDigest;
     }
 
-
-
-
-    public void putArticles(List<Article> articles) {
+    void putArticles(List<Article> articles) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.ENGLISH);
 
@@ -75,7 +72,7 @@ public class NewsDatabaseDao {
         return String.format("%32x", hash).replace(' ','0');
     }
 
-    public List<Article> getArticles() {
+    List<Article> getArticles() {
         String query = "SELECT * FROM " + TABLE_ARTICLES
                 + " ORDER BY " + ArticleColumns.COLUMN_PUBLISHED_AT + " DESC "
                 + "LIMIT 20";

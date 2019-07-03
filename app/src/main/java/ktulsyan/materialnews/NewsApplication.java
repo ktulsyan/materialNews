@@ -2,6 +2,8 @@ package ktulsyan.materialnews;
 
 import android.app.Application;
 
+import com.facebook.stetho.Stetho;
+
 import ktulsyan.materialnews.modules.ApplicationModule;
 import lombok.Getter;
 import timber.log.Timber;
@@ -16,9 +18,9 @@ public class NewsApplication extends Application {
         if(BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         } else {
-            //install crash reporting tree
+
         }
-        // Stetho.initializeWithDefaults(this);
+        Stetho.initializeWithDefaults(this);
         applicationComponent = DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this))
                 .build();

@@ -6,7 +6,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import ktulsyan.materialnews.NewsService;
 import ktulsyan.materialnews.models.Article;
 import ktulsyan.materialnews.models.TopHeadLinesResponse;
 import retrofit2.Call;
@@ -16,10 +15,10 @@ public class NetworkSource implements NewsDataSource {
     private static final int PAGE_SIZE = 40;
     private static final String USER_LOCATION = "in";
 
-    private final NewsService service;
+    private final NewsApiService service;
 
     @Inject
-    NetworkSource(NewsService service) {
+    NetworkSource(NewsApiService service) {
         this.service = service;
     }
 

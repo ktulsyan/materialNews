@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import ktulsyan.materialnews.data.NewsApiService;
 import ktulsyan.materialnews.models.Article;
 import ktulsyan.materialnews.models.TopHeadLinesResponse;
 import okhttp3.Interceptor;
@@ -38,12 +39,12 @@ public class Main {
                 .build();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(NewsService.API_BASE_URL)
+                .baseUrl(NewsApiService.API_BASE_URL)
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        NewsService service = retrofit.create(NewsService.class);
+        NewsApiService service = retrofit.create(NewsApiService.class);
 
         System.out.println(String.format("%x, ", 10));
 

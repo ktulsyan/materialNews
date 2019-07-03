@@ -1,11 +1,11 @@
-package ktulsyan.materialnews;
+package ktulsyan.materialnews.data;
 
 import ktulsyan.materialnews.models.TopHeadLinesResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-public interface NewsService {
+public interface NewsApiService {
     String API_BASE_URL = "https://newsapi.org/";
 
     @GET("/v2/top-headlines")
